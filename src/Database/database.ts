@@ -3,6 +3,10 @@ import shoes from "./images/shoes.jpg";
 import laptop from "./images/laptop.jfif";
 import pencil from "./images/pencil.jpg";
 import headphones from "./images/headphones.jfif";
+import basket from "./images/basket.jfif";
+import smartPhone from "./images/smartPhone.webp";
+import bicycle from "./images/bicycle.webp";
+import usb from "./images/usb.jpg";
 
 export class Ids {
   private static IdsGenerated: number = 0;
@@ -39,6 +43,34 @@ export const ItemsDataBase: item[] = [
     price: 100,
     id: Ids.generateId(),
     imgUrl: headphones,
+    quantity: 1,
+  },
+  {
+    name: "Basket",
+    price: 3,
+    id: Ids.generateId(),
+    imgUrl: basket,
+    quantity: 1,
+  },
+  {
+    name: "Smart Phone",
+    price: 300,
+    id: Ids.generateId(),
+    imgUrl: smartPhone,
+    quantity: 1,
+  },
+  {
+    name: "Bicycle",
+    price: 50,
+    id: Ids.generateId(),
+    imgUrl: bicycle,
+    quantity: 1,
+  },
+  {
+    name: "USB",
+    price: 20,
+    id: Ids.generateId(),
+    imgUrl: usb,
     quantity: 1,
   },
 ];

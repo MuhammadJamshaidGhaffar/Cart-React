@@ -1,20 +1,20 @@
 .cartDivWrapper {
   overflow: hidden;
   width: 35rem;
-  position: absolute;
+  position: fixed;
   right: 1rem;
   bottom: 1rem;
+  transition: height 0.5s linear;
 }
 
 .cartDiv {
   background-color: white;
-  transition: transform 0.5s linear;
 }
 .cartOpen {
-  transform: translateY(0%);
+  height: 35rem;
 }
 .cartClose {
-  transform: translateY(92%);
+  height: 2.8rem;
 }
 
 .header {
@@ -25,12 +25,18 @@
 
 .itemsDiv {
   height: 32rem;
+  overflow: scroll;
 }
 .item {
   color: black;
   font-size: 1.4rem;
   height: 4rem;
   /* padding: 1rem 2rem; */
+}
+.tableHeading {
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
 .item th,
 .item td {

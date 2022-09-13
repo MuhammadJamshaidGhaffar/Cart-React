@@ -13,29 +13,24 @@ function Cart() {
   console.log("inisde cart");
   console.log(items);
   return (
-    <div className={styles.cartDivWrapper}>
-      <div
-        className={`${styles.cartDiv} ${
-          isCartOpen ? styles.cartOpen : styles.cartClose
-        }`}
-      >
+    <div
+      className={`${styles.cartDivWrapper} ${
+        isCartOpen ? styles.cartOpen : styles.cartClose
+      }  `}
+    >
+      <div className={`${styles.cartDiv} `}>
         <div
           className={styles.header}
           onClick={() => {
             setCartOpen(!isCartOpen);
+            console.log("clciked");
           }}
         >
-          &and;
+          {isCartOpen ? <>&or;</> : <>&and;</>}
         </div>
         <div className={`${styles.itemsDiv} `}>
-          {/* <div className={`${styles.item}`}>
-            <p>Image</p>
-            <p>Name</p>
-            <p>Price</p>
-            <p>Quantity</p>
-          </div> */}
           <table>
-            <tr className={`${styles.item}`}>
+            <tr className={`${styles.item} ${styles.tableHeading}`}>
               <th>Image</th>
               <th>Name</th>
               <th>Price</th>
