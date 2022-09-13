@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { stat } from "fs";
 import { item } from "../types/item";
 
 const initialState: item[] = [];
@@ -10,7 +9,7 @@ const basketSlice = createSlice({
   reducers: {
     addItem: (state: item[], { payload }: { payload: item }) => {
       const index = state.findIndex((item) => item.id === payload.id);
-      if (index != -1) {
+      if (index !== -1) {
         state[index].quantity = state[index].quantity + 1;
       } else {
         state.push(payload);
@@ -19,14 +18,9 @@ const basketSlice = createSlice({
     deleteItem: (state: item[], { payload }: { payload: number }): item[] => {
       let newArr: item[] = [];
       state.forEach((item) => {
-        if (item.id != payload) newArr.push(item);
+        if (item.id !== payload) newArr.push(item);
       });
       return newArr;
-      // const arr = state.map((item: item) => {
-      //   if (item.id != payload) return item;
-      // });
-      // if (arr == undefined) return [];
-      // else if(arr != undefined) return arr;
     },
   },
 });
