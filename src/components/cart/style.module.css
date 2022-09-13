@@ -26,3 +26,29 @@
 .itemsDiv {
   height: 32rem;
 }
+.item {
+  color: black;
+  font-size: 1.4rem;
+  height: 4rem;
+  /* padding: 1rem 2rem; */
+}
+.item th,
+.item td {
+  padding: 1rem;
+}
+.item img {
+  width: 4rem;
+}
+
+.cross {
+  background-color: red;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  border-radius: 2rem;
+}
+
+.price {
+  color: red;
+}

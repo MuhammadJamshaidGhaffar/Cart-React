@@ -1,13 +1,23 @@
+import { useDispatch, useSelector } from "react-redux";
+import { addItem } from "../../store/reducer";
 import { item } from "../../types/item";
 import styles from "./Item.module.css";
 
 const Item: React.FC<item> = (item) => {
+  const dispatch = useDispatch();
   return (
     <div className={styles.itemDiv}>
       <div className={styles.imgWrapper}>
         <img src={item.imgUrl} />
         <div className={styles.imgShade}>
-          <button className={styles.add}>Add to Cart</button>
+          <button
+            className={styles.add}
+            onClick={() => {
+              dispatch(addItem(item));
+            }}
+          >
+            Add to Cart
+          </button>
         </div>
       </div>
 

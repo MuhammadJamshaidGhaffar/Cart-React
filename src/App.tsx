@@ -33,6 +33,7 @@ function App() {
               id={item.id}
               imgUrl={item.imgUrl}
               price={item.price}
+              quantity={item.quantity}
             />
           );
         })}

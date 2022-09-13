@@ -13,8 +13,32 @@ export class Ids {
   }
 }
 export const ItemsDataBase: item[] = [
-  { name: "Shoes", price: 20, id: Ids.generateId(), imgUrl: shoes },
-  { name: "Laptop", price: 500, id: Ids.generateId(), imgUrl: laptop },
-  { name: "Pencil", price: 1, id: Ids.generateId(), imgUrl: pencil },
-  { name: "Headphones", price: 100, id: Ids.generateId(), imgUrl: headphones },
+  {
+    name: "Shoes",
+    price: 20,
+    id: Ids.generateId(),
+    imgUrl: shoes,
+    quantity: 1,
+  },
+  {
+    name: "Laptop",
+    price: 500,
+    id: Ids.generateId(),
+    imgUrl: laptop,
+    quantity: 1,
+  },
+  {
+    name: "Pencil",
+    price: 1,
+    id: Ids.generateId(),
+    imgUrl: pencil,
+    quantity: 1,
+  },
+  {
+    name: "Headphones",
+    price: 100,
+    id: Ids.generateId(),
+    imgUrl: headphones,
+    quantity: 1,
+  },
 ];

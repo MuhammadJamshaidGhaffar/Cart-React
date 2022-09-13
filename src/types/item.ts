@@ -3,5 +3,5 @@ export type item = {
   id: number;
   imgUrl: string;
   price: number;
-  quantity?: number;
+  quantity: number;
 };
